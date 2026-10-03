@@ -1,0 +1,1550 @@
+/* ==================================================
+   BASIC RESET
+================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: #050505;
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+
+/* ==================================================
+   01 / HERO
+================================================== */
+
+.hero {
+
+    height: 100vh;
+
+    height: 100svh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    animation:
+        heroEntrance 1.5s ease forwards;
+
+}
+
+
+@keyframes heroEntrance {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.hero-header {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    right: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 20;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.brand-name {
+
+    white-space: nowrap;
+
+}
+
+
+.number,
+.section-number {
+
+    opacity: 0.6;
+
+}
+
+
+
+/* ==================================================
+   VIDEO
+================================================== */
+
+.visual {
+
+    position: absolute;
+
+    width: 80vw;
+
+    max-width: 1200px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    z-index: 1;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+.visual video {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+
+/* ==================================================
+   SOUND
+================================================== */
+
+.sound {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+
+    z-index: 20;
+
+}
+
+
+.sound span {
+
+    margin-left: 8px;
+
+}
+
+
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.scroll {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.6;
+
+    z-index: 20;
+
+}
+
+
+
+/* ==================================================
+   SECTION NUMBER
+================================================== */
+
+.section-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+
+    z-index: 10;
+
+}
+
+
+
+/* ==================================================
+   02 / CONCEPT
+================================================== */
+
+.concept {
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #050505;
+
+    overflow: hidden;
+
+}
+
+
+.concept-content {
+
+    width: 80%;
+
+    max-width: 1100px;
+
+    text-align: center;
+
+}
+
+
+.concept-label {
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+
+    margin-bottom: 35px;
+
+}
+
+
+.concept-title {
+
+    font-size:
+        clamp(
+            50px,
+            10vw,
+            150px
+        );
+
+    font-weight: 400;
+
+    letter-spacing: -0.05em;
+
+    margin-bottom: 70px;
+
+}
+
+
+.concept-statement {
+
+    font-size:
+        clamp(
+            24px,
+            4vw,
+            55px
+        );
+
+    line-height: 1.5;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+.concept-statement p {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+
+        opacity 0.8s ease,
+
+        transform 0.8s ease;
+
+}
+
+
+.concept-statement p.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.concept-japanese {
+
+    margin-top: 70px;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    letter-spacing: 0.1em;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+.concept-japanese.show {
+
+    opacity: 0.65;
+
+    transform:
+        translateY(0);
+
+}
+
+
+
+/* ==================================================
+   03 / MISSION
+================================================== */
+
+.mission {
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #050505;
+
+    overflow: hidden;
+
+}
+
+
+.mission-content {
+
+    width: 80%;
+
+    max-width: 1200px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        scale(0.8);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1.2s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+}
+
+
+.mission-content.show {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+
+.mission-label {
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+
+    margin-bottom: 60px;
+
+    opacity: 0.6;
+
+}
+
+
+.mission-title {
+
+    font-size:
+        clamp(
+            45px,
+            8vw,
+            120px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.mission-japanese {
+
+    margin-top: 70px;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.6;
+
+}
+
+
+
+/* ==================================================
+   04 / KEYWORDS
+================================================== */
+
+.keywords {
+
+    height: 600vh;
+
+    position: relative;
+
+    background: #050505;
+
+}
+
+
+.keyword-stage {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    height: 100svh;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.keywords-label {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+
+    opacity: 0.6;
+
+    z-index: 10;
+
+}
+
+
+.keyword-list {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.keyword {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 90%;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    font-size:
+        clamp(
+            40px,
+            8vw,
+            120px
+        );
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+    opacity: 0;
+
+    transform:
+        translate(
+            -50%,
+            calc(-50% + 80px)
+        )
+        scale(0.85);
+
+    transition:
+
+        opacity 0.7s ease,
+
+        transform 0.9s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+
+    pointer-events: none;
+
+}
+
+
+.keyword.active {
+
+    opacity: 1;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        scale(1);
+
+}
+
+
+
+/* ==================================================
+   05 / VISION
+================================================== */
+
+.vision {
+
+    height: 500vh;
+
+    position: relative;
+
+    background: #050505;
+
+}
+
+
+.vision-stage {
+
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    height: 100svh;
+
+    overflow: hidden;
+
+}
+
+
+.vision-label {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+
+    opacity: 0.6;
+
+    z-index: 10;
+
+}
+
+
+
+/* ==================================================
+   VISION NETWORK
+================================================== */
+
+.vision-network {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 80vw;
+
+    max-width: 600px;
+
+    height: 70vh;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+}
+
+
+
+/* CENTER */
+
+.vision-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size:
+        clamp(
+            28px,
+            6vw,
+            80px
+        );
+
+    letter-spacing: -0.04em;
+
+    white-space: nowrap;
+
+    z-index: 5;
+
+}
+
+
+
+/* ==================================================
+   WORDS
+================================================== */
+
+.vision-word {
+
+    position: absolute;
+
+    left: 50%;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size:
+        clamp(
+            18px,
+            3vw,
+            38px
+        );
+
+    letter-spacing: 0.05em;
+
+    opacity: 0;
+
+    white-space: nowrap;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+
+/* DANCE */
+
+.word-dance {
+
+    top: 4%;
+
+    transform:
+        translate(
+            -50%,
+            40px
+        );
+
+}
+
+
+
+/* MUSIC */
+
+.word-music {
+
+    top: 25%;
+
+    transform:
+        translate(
+            -50%,
+            40px
+        );
+
+}
+
+
+
+/* ART */
+
+.word-art {
+
+    top: 70%;
+
+    transform:
+        translate(
+            -50%,
+            -40px
+        );
+
+}
+
+
+
+/* PEOPLE */
+
+.word-people {
+
+    top: 91%;
+
+    transform:
+        translate(
+            -50%,
+            -40px
+        );
+
+}
+
+
+
+/* ==================================================
+   LINES
+================================================== */
+
+.vision-line {
+
+    position: absolute;
+
+    left: 50%;
+
+    width: 1px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.5
+        );
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+
+/* DANCE → CENTER */
+
+.line-dance {
+
+    top: 13%;
+
+    height: 37%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:
+        bottom;
+
+}
+
+
+
+/* MUSIC → CENTER */
+
+.line-music {
+
+    top: 34%;
+
+    height: 16%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:
+        bottom;
+
+}
+
+
+
+/* CENTER → ART */
+
+.line-art {
+
+    top: 50%;
+
+    height: 22%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:
+        top;
+
+}
+
+
+
+/* ART → PEOPLE */
+
+.line-people {
+
+    top: 76%;
+
+    height: 15%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:
+        top;
+
+}
+
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.vision-description {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 30px;
+
+    max-width: 420px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.05em;
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+
+    transition:
+
+        opacity 0.5s ease,
+
+        transform 0.5s ease;
+
+}
+
+
+
+/* ==================================================
+   06 / PHILOSOPHY
+================================================== */
+
+.philosophy {
+
+    height: 220vh;
+
+    position: relative;
+
+    background: #050505;
+
+}
+
+
+.philosophy-stage {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    height: 100svh;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.philosophy-label {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+
+    opacity: 0.6;
+
+}
+
+
+.philosophy-content {
+
+    width: 85%;
+
+    max-width: 1000px;
+
+    text-align: center;
+
+}
+
+
+.philosophy-text {
+
+    font-size:
+        clamp(
+            25px,
+            4vw,
+            55px
+        );
+
+    line-height: 1.4;
+
+    letter-spacing: -0.03em;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+.philosophy-japanese {
+
+    margin-top: 50px;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    letter-spacing: 0.1em;
+
+    opacity: 0.55;
+
+    will-change:
+        opacity;
+
+}
+
+
+.philosophy-final {
+
+    margin-top: 80px;
+
+    font-size:
+        clamp(
+            35px,
+            6vw,
+            90px
+        );
+
+    letter-spacing: -0.05em;
+
+    opacity: 0;
+
+    transform:
+        scale(0.8);
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* ==================================================
+       BASIC
+    ================================================== */
+
+    .hero-header {
+
+        top: 20px;
+
+        left: 20px;
+
+        right: 20px;
+
+        font-size: 10px;
+
+    }
+
+
+    .section-number {
+
+        top: 20px;
+
+        right: 20px;
+
+        font-size: 10px;
+
+    }
+
+
+
+    /* ==================================================
+       HERO
+    ================================================== */
+
+    .visual {
+
+        width: 105vw;
+
+        max-width: none;
+
+    }
+
+
+    .sound {
+
+        right: 20px;
+
+        bottom: 25px;
+
+        font-size: 10px;
+
+    }
+
+
+    .scroll {
+
+        bottom: 25px;
+
+        font-size: 9px;
+
+    }
+
+
+
+    /* ==================================================
+       02
+    ================================================== */
+
+    .concept-content {
+
+        width: 88%;
+
+    }
+
+
+    .concept-label {
+
+        font-size: 9px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .concept-title {
+
+        font-size: 14vw;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .concept-statement {
+
+        font-size: 7vw;
+
+        line-height: 1.45;
+
+    }
+
+
+    .concept-japanese {
+
+        margin-top: 50px;
+
+        font-size: 11px;
+
+    }
+
+
+
+    /* ==================================================
+       03
+    ================================================== */
+
+    .mission-content {
+
+        width: 88%;
+
+    }
+
+
+    .mission-label {
+
+        font-size: 9px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .mission-title {
+
+        font-size: 11vw;
+
+        line-height: 1.15;
+
+    }
+
+
+    .mission-japanese {
+
+        margin-top: 45px;
+
+        font-size: 11px;
+
+    }
+
+
+
+    /* ==================================================
+       04
+    ================================================== */
+
+    .keywords {
+
+        height: 600vh;
+
+    }
+
+
+    .keywords-label {
+
+        top: 20px;
+
+        left: 20px;
+
+        font-size: 9px;
+
+    }
+
+
+    .keyword {
+
+        width: 90%;
+
+        white-space: normal;
+
+        font-size: 11vw;
+
+        line-height: 1.15;
+
+        padding: 0 15px;
+
+    }
+
+
+
+    /* ==================================================
+       05 / VISION
+    ================================================== */
+
+    .vision {
+
+        height: 500vh;
+
+    }
+
+
+    .vision-label {
+
+        top: 20px;
+
+        left: 20px;
+
+        font-size: 9px;
+
+    }
+
+
+    .vision-network {
+
+        width: 100%;
+
+        height: 72vh;
+
+        top: 50%;
+
+    }
+
+
+    .vision-center {
+
+        width: 90%;
+
+        font-size: 8vw;
+
+        white-space: normal;
+
+        line-height: 1.1;
+
+    }
+
+
+    .vision-word {
+
+        width: 100%;
+
+        font-size: 6vw;
+
+    }
+
+
+    /*
+       手机版：
+
+       四个词分别在
+       上 / 上中 / 下中 / 下
+
+       不再横向挤在一起
+    */
+
+    .word-dance {
+
+        top: 3%;
+
+    }
+
+
+    .word-music {
+
+        top: 27%;
+
+    }
+
+
+    .word-art {
+
+        top: 70%;
+
+    }
+
+
+    .word-people {
+
+        top: 94%;
+
+    }
+
+
+    .line-dance {
+
+        top: 10%;
+
+        height: 40%;
+
+    }
+
+
+    .line-music {
+
+        top: 35%;
+
+        height: 15%;
+
+    }
+
+
+    .line-art {
+
+        top: 50%;
+
+        height: 23%;
+
+    }
+
+
+    .line-people {
+
+        top: 77%;
+
+        height: 15%;
+
+    }
+
+
+    .vision-description {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 25px;
+
+        max-width: none;
+
+        font-size: 10px;
+
+        line-height: 1.7;
+
+    }
+
+
+
+    /* ==================================================
+       06
+    ================================================== */
+
+    .philosophy {
+
+        height: 220vh;
+
+    }
+
+
+    .philosophy-label {
+
+        top: 20px;
+
+        left: 20px;
+
+        font-size: 9px;
+
+    }
+
+
+    .philosophy-content {
+
+        width: 88%;
+
+    }
+
+
+    .philosophy-text {
+
+        font-size: 6.5vw;
+
+        line-height: 1.5;
+
+    }
+
+
+    .philosophy-japanese {
+
+        margin-top: 40px;
+
+        font-size: 10px;
+
+    }
+
+
+    .philosophy-final {
+
+        margin-top: 65px;
+
+        font-size: 10vw;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+
+    }
+
+}
